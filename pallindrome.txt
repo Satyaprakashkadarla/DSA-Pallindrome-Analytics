@@ -1,0 +1,21 @@
+Here's the pseudocode for checking whether a number is a palindrome:
+
+function isPalindrome(number):
+    // Convert number to string
+    numStr = convertToString(number)
+    
+    // Initialize variables for left and right pointers
+    left = 0
+    right = length(numStr) - 1
+    
+    // Loop until left pointer is less than right pointer
+    while left < right:
+        // If characters at left and right pointers don't match, return false
+        if numStr[left] != numStr[right]:
+            return false
+        // Move the pointers towards the center
+        left = left + 1
+        right = right - 1
+    
+    // If the loop completes without returning false, it's a palindrome
+    return true
